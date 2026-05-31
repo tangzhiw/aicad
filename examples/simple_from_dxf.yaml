@@ -1,0 +1,59 @@
+version: 1
+meta:
+  source: original_simple.dxf
+  description: 由简单 DXF 自动提取的 YAML。仅覆盖 demo 支持的 CAD 实体。
+  supported_entities:
+  - line
+  - circle
+  - arc
+  - polyline
+  - text
+  ignored_entity_types: []
+drawing:
+  units: mm
+  dxf_version: R2010
+layers:
+- name: CENTER
+  color: 5
+- name: HOLE
+  color: 1
+- name: OUTLINE
+  color: 7
+- name: TEXT
+  color: 3
+entities:
+- id: E001
+  type: polyline
+  layer: OUTLINE
+  points:
+  - [0.0, 0.0]
+  - [160.0, 0.0]
+  - [160.0, 80.0]
+  - [0.0, 80.0]
+  closed: true
+- id: E002
+  type: circle
+  layer: HOLE
+  center: [40.0, 40.0]
+  radius: 8.0
+- id: E003
+  type: circle
+  layer: HOLE
+  center: [120.0, 40.0]
+  radius: 8.0
+- id: E004
+  type: line
+  layer: CENTER
+  start: [0.0, 40.0]
+  end: [160.0, 40.0]
+- id: E005
+  type: line
+  layer: CENTER
+  start: [80.0, 0.0]
+  end: [80.0, 80.0]
+- id: E006
+  type: text
+  layer: TEXT
+  value: SIMPLE PLATE
+  insert: [45.0, 92.0]
+  height: 8.0
