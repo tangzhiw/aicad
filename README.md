@@ -226,14 +226,5 @@ components:
 
 ---
 
-## 8. 推荐 GitHub 仓库描述
 
-```text
-A minimal Python demo for converting simple DXF drawings to YAML, regenerating DXF from YAML, and validating the roundtrip result.
-```
-
-中文描述：
-
-```text
-一个最小可运行的 DXF ↔ YAML 往返转换与正确性校验 demo，用于验证 YAML 驱动 CAD 自动绘图的技术路线。
 ```
